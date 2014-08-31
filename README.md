@@ -1,24 +1,20 @@
 # Util
 
-TODO: Write a gem description
+My Ruby Swiss Army Knife
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'util'
+    gem 'util', github: 'bchase/util'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install util
-
 ## Usage
 
-TODO: Write usage instructions here
+Coming soon.
 
 ## Contributing
 
