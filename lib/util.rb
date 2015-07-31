@@ -30,4 +30,12 @@ module Util
       end
     end
   end
+
+  def self.define_pathname_helper
+    require 'pathname'
+
+    Kernel.class_eval do
+      alias :pn :Pathname
+    end
+  end
 end

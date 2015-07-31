@@ -16,4 +16,14 @@ describe Util do
       klass.new(foo: 'bar').foo.should eq 'bar'
     end
   end
+
+  describe '::define_pathname_helper' do
+    it 'provides a shortcut for defining Virtus models' do
+      self.should_not respond_to(:pn)
+
+      Util.define_pathname_helper
+
+      pn('foo.bar').should eq Pathname.new('foo.bar')
+    end
+  end
 end
