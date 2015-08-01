@@ -5,6 +5,7 @@ describe Util do
     let(:klass) {
       Class.new do
         virtus :foo
+        # vattr :baz, default: 'boo'
       end
     }
 
@@ -12,8 +13,13 @@ describe Util do
       Util.define_virtus_helper
     end
 
-    it 'provides a shortcut for defining Virtus models' do
+    it 'provides a `virtus` shortcut for including Virtus.model and defining Virtus attributes' do
       klass.new(foo: 'bar').foo.should eq 'bar'
+    end
+
+    it 'provides a `vattr` shortcut for defining Virtus attributes' do
+      pending
+      klass.new(foo: 'bar').baz.should eq 'boo'
     end
   end
 
